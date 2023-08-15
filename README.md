@@ -26,7 +26,7 @@ To deploy this project run
 
 ## Tech Stack
 
-**Client:** ReactJS, TailwindCSS
+**Client:** ReactJS
 
 **Server:** Firebase
 
