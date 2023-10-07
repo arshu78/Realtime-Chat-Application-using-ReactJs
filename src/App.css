@@ -1,38 +1,200 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: sans-serif;
+  background: #fafafa;
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  background-image: linear-gradient(to right bottom, #c72c54, #922549, #601e38, #321522, #040002);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+  width: 1000px;
+  max-width: 1000px;
+  background-color: #121621;
+  margin-left: 258px;
+  position: fixed;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar__container {
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 60px;
+  color: #fff;
+  padding: 20px;
+}
+.navbar__logo {
+  flex: 1;
+}
+.navbar__links {
+  flex: 1;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar__links li {
+  list-style-type: none;
+}
+.navbar__btn {
+  text-decoration: none;
+  height: 35px;
+  border: none;
+  background-color: #53117a;
+  border-radius: 5px;
+  color: #fff;
+  padding: 0 10px;
+  box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.4);
+  outline: none;
+  cursor: pointer;
+}
+.navbar__img {
+  width: 35px;
+  height: 35px;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.navbar__img img {
+  width: 100%;
+  height: 100%;
+}
+.messages {
+  width: 1000px;
+  max-width: 1200px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: #1a2030;
+  height: calc(100vh - 120px);
+  margin: 60px auto;
+  padding: 20px;
+  overflow-y: scroll;
+}
+.input__form {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 1000px;
+  margin: 0 auto;
+}
+.input__control {
+  background: #161c2c;
+  width: 100%;
+  height: 60px;
+  border: 1px solid #050505;
+  outline: none;
+  padding: 0 15px;
+  color: rgba(255, 255, 255, 0.815);
+}
+.messages__other {
+  display: flex;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.messages__other-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.messages__other-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.messages__other-msg {
+  width: 400px;
+  padding-left: 10px;
+  margin-top: 7px;
+}
+.messages__other-msg p {
+  display: inline-block;
+  background-image: linear-gradient(to right bottom, #fe945b, #ff8255, #ff6e53, #fe5754, #fc3c57);
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 7px;
+  border-radius: 4px;
+  color: white;
+}
+.messages__other-msg span {
+  display: block;
+  text-transform: capitalize;
+}
+.messages__my {
+  display: flex;
+  justify-content: flex-end;
+}
+.messages__my-p {
+  width: 400px;
+  text-align: right;
+  margin-top: 7px;
+}
+.messages__my-p p {
+  display: inline-block;
+  padding: 10px;
+  font-size: 14px;
+  background-image: linear-gradient(to right bottom, #f4315a, #d70269, #b20074, #86007b, #53117a);
+  color: #fff;
+  border-radius: 4px;
+}
+.welcome {
+  background: #1a2030;
+  width: 1000px;
+  padding: 50px;
+  position: absolute;
+  margin-left: 258px;
+  margin-top: 62px;
+}
+.welcome h1 {
+  margin-bottom: 15px;
+  color: #06cbf8be;
+}
+.welcome p{
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 765px) {
+  .navbar{
+    width: 90%;
+    margin-left: 15px;
   }
-  to {
-    transform: rotate(360deg);
+  .navbar__container {
+    width: 400px;
+    max-width: 500px;
+    padding: 0 20px;
+  }
+  .messages {
+    width: 90%;
+  }
+  .welcome
+  {
+    width: 650px;
+    margin-left: 17px;
+  }
+}
+
+@media(max-width:400px)
+{
+  .navbar{
+    width: 80%;
+  }
+  .navbar__container {
+    width: 70%;
+    padding: 0px;
+  }
+  .welcome
+  {
+    width: 80%;
+    margin-top: 100px;
+  
   }
 }
